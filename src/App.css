@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+/*
+  RESETS:
+*/
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*
+  GLOBALS: 
+*/
+
+:root {
+  --bg-color: #218380;
+  font-family: Verdana;
+}
+body {
+  width: 100vw;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main, 
+.questions,
+.addHighscore,
+.highscores {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);  
+  border: 2px solid lightgray;
+  border-radius: 15px;
+  min-width: 55%;
+  min-height: 300px;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px lightgray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main button, 
+.addHighscore .addScoreBtn,
+.highscoresBtn  {
+  background-color: var(--bg-color);
+  border: var(--bg-color);
+  border-radius: 7px;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/*
+  HEADER 
+*/
+.App header {
+  background-color: var(--bg-color);
+  width: 100%;
+  color: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.showHighscore {
+  cursor: pointer;
+}
+
+.timer {
+  padding-right: 20px;
+  display: flex;
+}
+
+/*
+  MAIN MENU
+*/
+
+.main h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+.main p {
+  margin: 10px 0;
+}
+
+/*
+  QUESTIONS
+*/ 
+.questions h2 {
+  margin-bottom: 20px;
+}
+
+.questions ul {
+  list-style-type: none;
+}
+
+.questions li {
+  background-color: var(--bg-color);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 7px;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.questions hr {
+  border: 1px solid lightgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.correctMsg {
+  margin-top: 10px;
+}
+
+/*
+  ADD HIGHSCORE
+*/
+
+.addHighscore {
+  min-width: 40%;
+  min-height: 200px;
+}
+
+.addHighscore * {
+  margin: 10px;
+}
+
+.addHighscore input {
+  width: 100px;
+  height: 30px;
+}
+
+/*
+  HIGHSCORES
+*/
+
+.highscores {
+  min-width: 25%;
+  min-height: 200px;
+}
+
+.highscores h2 {
+  font-weight: 900;
+}
+
+.highscores ol {
+  margin: 10px 0 10px 40px;
+}
+
+.highscoresBtnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
